@@ -16,12 +16,12 @@ namespace R5T.F0123
     {
         public ((
             string Key,
-            SimpleTypeName SimpleTypeName,
-            NamespacedTypeName NamespacedTypeName,
+            ISimpleTypeName SimpleTypeName,
+            INamespacedTypeName NamespacedTypeName,
             IProjectFilePath ProjectFilePath) ContainingTypeInformation,
             (InstanceDescriptor Instance,
-            SimplePropertyName SimplePropertyName,
-            OutputTypeName OutputTypeName)[] InstancesInformation)[]
+            ISimplePropertyName SimplePropertyName,
+            IOutputTypeName OutputTypeName)[] InstancesInformation)[]
         Group_PropertiesAndDeclaringType(IEnumerable<InstanceDescriptor> instances)
         {
             var groups = instances
