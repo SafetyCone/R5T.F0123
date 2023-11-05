@@ -27,7 +27,7 @@ namespace R5T.F0123
             var groups = instances
                 .Select(instance =>
                 {
-                    var kindMarkedFullPropertyName = instance.KindMarkedFullMemberName.AsKindMarkedFullPropertyName();
+                    var kindMarkedFullPropertyName = instance.IdentityString.Value.ToKindMarkedFullMemberName().AsKindMarkedFullPropertyName();
 
                     var (simpleTypeName, namespacedTypeName, namespacedTypedPropertyName, fullPropertyName)
                         = Instances.MemberNameOperator.Get_SimpleTypeName(kindMarkedFullPropertyName);
